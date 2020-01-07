@@ -1,0 +1,53 @@
+{
+  "name": "react-tdd-app",
+  "version": "1.0.0",
+  "description": "A tutorial application to tdd in react",
+  "main": "index.js",
+  "scripts": {
+    "e2e": "cypress open",
+    "unit": "jest test/unit/**.spec.js --watch",
+    "lint": "eslint cypress/integration/**.spec.js src/**/*.js test/**/*.js",
+    "start": "parcel public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joby-Sunny/react-tdd-app.git"
+  },
+  "keywords": [
+    "react",
+    "test-driven-development"
+  ],
+  "author": "Joby-Sunny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joby-Sunny/react-tdd-app/issues"
+  },
+  "homepage": "https://github.com/Joby-Sunny/react-tdd-app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.9.0",
+    "cypress": "^3.8.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-cypress": "^2.8.1",
+    "eslint-plugin-jest": "^23.3.0",
+    "eslint-plugin-react": "^7.17.0",
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.4.1",
+    "tailwindcss": "^1.1.4"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>test/setup.js"
+    ]
+  }
+}
