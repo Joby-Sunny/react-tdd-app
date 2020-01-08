@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "e2e": "cypress open",
-    "unit": "jest test/unit/**.spec.js --watch",
+    "unit": "jest test/unit/**.spec.js",
     "lint": "eslint cypress/integration/**.spec.js src/**/*.js test/**/*.js",
     "start": "parcel public/index.html"
   },
@@ -42,8 +42,10 @@
     "tailwindcss": "^1.1.4"
   },
   "dependencies": {
+    "qs": "^6.9.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2"
   },
   "jest": {
     "setupFilesAfterEnv": [
