@@ -1,4 +1,5 @@
 import {testId} from '../../utils';
+import HomeConst from '../../src/Routes/HomePage/index.constants';
 
 const AddPost = {
     title: 'Title of the Post',
@@ -8,12 +9,12 @@ const AddPost = {
 describe('Testing all Feature for the Home Page :: ', () => {
     it('Adding a Post to the Post List', () => {
         cy.visit('http://localhost:1234/');
-        cy.get(testId('addPostWindow')).should('not.exist');
-        cy.get(testId('addPostButton')).click();
-        cy.get(testId('addPostTitle')).type(AddPost.title);
-        cy.get(testId('addPostDescripton')).type(AddPost.description);
-        cy.get(testId('savePostButton')).click();
-        cy.get(testId('addPostWindow')).click();
+        cy.get(testId(HomeConst.addPostWindow)).should('not.exist');
+        cy.get(testId(HomeConst.addPostButton)).click();
+        cy.get(testId(HomeConst.addPostTitle)).type(AddPost.title);
+        cy.get(testId(HomeConst.addPostDescription)).type(AddPost.description);
+        cy.get(testId(HomeConst.savePostButton)).click();
+        cy.get(testId(HomeConst.addPostWindow)).should('not.exist');
         cy.contains(AddPost.title);
         cy.contains(AddPost.description.substring(0, 300));
     });

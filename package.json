@@ -36,20 +36,33 @@
     "eslint-plugin-cypress": "^2.8.1",
     "eslint-plugin-jest": "^23.3.0",
     "eslint-plugin-react": "^7.17.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
+    "jsdom": "^15.2.1",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^1.4.1",
     "tailwindcss": "^1.1.4"
   },
   "dependencies": {
+    "prop-type": "0.0.1",
+    "prop-types": "^15.7.2",
     "qs": "^6.9.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2"
   },
   "jest": {
+    "globals": {},
     "setupFilesAfterEnv": [
       "<rootDir>test/setup.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
     ]
   }
 }
