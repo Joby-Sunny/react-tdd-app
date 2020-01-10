@@ -12,7 +12,9 @@ PopUp.propTypes = {
 function PopUp(props) {
     const modalRoot = document.getElementById('modal-root');
     const wrap = document.createElement('div');
-    wrap.classList = ['popup-overlay', 'bg-gray-800', 'opacity-50'].join(' ');
+    wrap.classList = ['popup-overlay'].join(
+        ' '
+    );
 
     useEffect(() => {
         modalRoot.appendChild(wrap);
@@ -42,7 +44,7 @@ function PopUpContent(props) {
 
     return (
         <div
-            className='max-w-2xl mx-auto rounded bg-white  border-black border-solid  border-2 popup-window'
+            className='max-w-2xl mx-auto rounded-lg overflow-hidden bg-white  border-grey-400 border-solid  border popup-window'
             ref={wrapperRef}>
             {props.children}
         </div>

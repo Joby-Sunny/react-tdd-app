@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-Input.propTypes = {
+TextArea.propTypes = {
     type: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
@@ -12,10 +12,10 @@ Input.propTypes = {
     dataTest: PropTypes.string
 };
 
-function Input(props) {
+function TextArea(props) {
     const classList = [...props.classList];
     return (
-        <input
+        <textarea
             data-test={props.dataTest}
             className={classList.join(' ')}
             type={props.type}
@@ -23,9 +23,8 @@ function Input(props) {
             value={props.value}
             placeholder={props.placeholder}
             onChange={props.change}
-            disabled={props.disabled}
-        />
+            disabled={props.disabled}></textarea>
     );
 }
 
-export default Input;
+export default TextArea;

@@ -1,0 +1,6 @@
+.button-common {
+  transition: ease-in-out 0.3s;
+}
+.button-common:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}

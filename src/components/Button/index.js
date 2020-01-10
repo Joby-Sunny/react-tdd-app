@@ -1,14 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './style.css';
 
 function Button(props) {
-    const classList = [
-        'rounded',
-        'shadow-md',
-        'px-3',
-        'py-2',
-        ...props.classList
-    ];
+    const classList = ['button-common',...props.classList];
     return (
         <button
             className={classList.join(' ')}
