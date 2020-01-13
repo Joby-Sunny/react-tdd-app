@@ -3,6 +3,7 @@ import {mount} from 'enzyme';
 import {testId} from '../../utils/index';
 
 import EditPost from '../../src/components/EditPost';
+import CONST from '../../src/components/EditPost/index.constants';
 import HomeConst from '../../src/Routes/HomePage/index.constants';
 
 const sampleOutput = {
@@ -13,7 +14,8 @@ const sampleOutput = {
 describe('EditPage Component', () => {
     const EditPostProps = {
         dataTest: HomeConst.addPostWindow,
-        savePost: jest.fn()
+        savePost: jest.fn(),
+        cancel: jest.fn()
     };
     const Component = mount(<EditPost {...EditPostProps} />);
     const TitleInput = Component.find(testId(HomeConst.addPostTitle));
@@ -29,6 +31,9 @@ describe('EditPage Component', () => {
     });
     it('Renders Save Post Button', () => {
         expect(SaveButton.length).toBe(1);
+    });
+    it('Renders Close Window Button', () => {
+        expect(Component.find(testId(CONST.closeButton)).length).toBe(1);
     });
     it('Save Post is called with Proper params', () => {
         TitleInput.simulate('change', {

@@ -1,22 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PopUp from '../../../../components/PopUp';
-import EditPost from '../../../../components/EditPost';
-import CONST from '../../index.constants';
 
 PopUpWrap.porpTypes = {
-    windowOpen: PropTypes.bool.isRequired,
     closeWindow: PropTypes.func.isRequired,
-    savePost: PropTypes.func.isRequired
+    windowOpen: PropTypes.bool.isRequired,
+    children: PropTypes.element.isRequired
 };
 
 function PopUpWrap(props) {
     if (props.windowOpen) {
-        return (
-            <PopUp close={props.closeWindow}>
-                <EditPost dataTest={CONST.addPostWindow} savePost={props.savePost} />
-            </PopUp>
-        );
+        return <PopUp close={props.closeWindow}>{props.children}</PopUp>;
     } else {
         return null;
     }

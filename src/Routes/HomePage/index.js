@@ -4,6 +4,7 @@ import STATE from './index.state';
 import NewPostBar from './children/NewPostBar';
 import PopUpWrap from './children/PopUpWrap';
 import Icon from '../../components/Icon';
+import EditPost from '../../components/EditPost';
 import {timeFromNow} from '../../utils';
 
 function HomePage() {
@@ -67,10 +68,14 @@ function HomePage() {
                 <div className='w-3/12 bg-white ml-3 rounded-lg overflow-hidden shadow-md'></div>
             </div>
             <PopUpWrap
-                windowOpen={state.window}
                 closeWindow={closeWindow}
-                savePost={savePost}
-            />
+                windowOpen={state.window}>
+                <EditPost
+                    dataTest={CONST.addPostWindow}
+                    savePost={savePost}
+                    cancel={closeWindow}
+                />
+            </PopUpWrap>
         </>
     );
 }
