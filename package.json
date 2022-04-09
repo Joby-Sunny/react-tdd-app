@@ -45,7 +45,7 @@
     "tailwindcss": "^1.1.4"
   },
   "dependencies": {
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "prop-type": "0.0.1",
     "prop-types": "^15.7.2",
     "qs": "^6.9.1",
