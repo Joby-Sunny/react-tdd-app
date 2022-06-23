@@ -39,7 +39,7 @@
     "eslint-plugin-react": "^7.17.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
-    "jsdom": "^15.2.1",
+    "jsdom": "^16.5.0",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^1.4.1",
     "tailwindcss": "^1.1.4"
